@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { MenusModule } from './menus/menus.module';
 import { ImagesModule } from './images/images.module';
 import { ButtonsModule } from './buttons/buttons.module';
-
+import { GridModule } from './grid/grid.module';
+import { MoreModule } from './more/more.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { ButtonsModule } from './buttons/buttons.module';
     AppRoutingModule,
     MenusModule,
     ImagesModule,
-    ButtonsModule
+    ButtonsModule,
+    GridModule,
+    MoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
