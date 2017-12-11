@@ -1,0 +1,38 @@
+@import "../../variables.less";
+
+button {
+    &.accordion {
+        background-color: @light-grey;
+        color: @dark-grey;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: all @medium-speed ease;
+
+        &.active, &:hover {
+            background-color: #ccc;
+        }
+
+        &:after {
+            content: '\002b'; /* Unicode character for "plus" sign (+) */
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        &.active:after {
+            content: "\2212";
+        }
+    }
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all @medium-speed ease;
+}

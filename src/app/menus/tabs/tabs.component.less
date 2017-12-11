@@ -1,0 +1,57 @@
+@import "../../variables.less";
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+
+    button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: all @medium-speed ease;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+        &.active {
+            background-color: #ccc;
+        }
+    }
+}
+
+.tab-content {
+    position: relative;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s;
+}
+
+.show {
+    display: block;
+}
+
+.close-tab {
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
