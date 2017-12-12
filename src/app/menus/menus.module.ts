@@ -5,6 +5,7 @@ import { IconBarComponent } from './icon-bar/icon-bar.component';
 import { MenuIconComponent } from './menu-icon/menu-icon.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { FixedSidebarComponent } from './fixed-sidebar/fixed-sidebar.component';
 
 @NgModule({
   imports: [
@@ -15,14 +16,16 @@ import { TabsComponent } from './tabs/tabs.component';
     IconBarComponent,
     MenuIconComponent,
     AccordionComponent,
-    TabsComponent
+    TabsComponent,
+    FixedSidebarComponent
   ],
   exports: [
     ResponsiveTopNavComponent,
     IconBarComponent,
     MenuIconComponent,
     AccordionComponent,
-    TabsComponent
+    TabsComponent,
+    FixedSidebarComponent
   ]
 })
 export class MenusModule { }

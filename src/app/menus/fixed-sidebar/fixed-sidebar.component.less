@@ -1,0 +1,40 @@
+@import "../../variables.less";
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: @lighter-grey;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+    a {
+        padding: 2px 1px 1px 16px;
+        text-decoration: none;
+        color: black;
+        display: block;
+
+        &:hover {
+            background-color: @grey;
+        }
+
+        &.active,
+        &.active:hover {
+            color: white;
+            background-color: @green;
+        }
+    }
+
+    h2 {
+        padding: 0 0 0 16px;
+        margin: -4px 0 4px 0;
+    }
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
