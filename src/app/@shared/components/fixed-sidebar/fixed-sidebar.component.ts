@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MenuGroup } from '../menu-entities/menu-group';
-import { MenuItem } from '../menu-entities/menu-item';
+import { MenuGroup } from '../../entities';
+import { MenuItem } from '../../entities';
 
 @Component({
     selector: 'app-fixed-sidebar',
