@@ -10,6 +10,7 @@ import { ResponsiveTopNavComponent } from './components/responsive-top-nav/respo
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { SocialMediaButtonsComponent } from './components/social-media-buttons/social-media-buttons.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { MenuService } from './services/menu.service';
 
 @NgModule({
     declarations: [
@@ -39,6 +40,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
     imports: [
       CommonModule
     ],
-    providers: []
+    providers: [
+        MenuService
+    ]
 })
 export class SharedModule { }
