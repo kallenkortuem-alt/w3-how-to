@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
+import {Http, Response} from '@angular/http';
+
 import { Observable } from 'rxjs/Observable';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MenuGroup } from '../entities/menu-group';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MenuService {
 
     constructor(
-        private http: HttpClient
+        private http: Http
     ) { }
 
     public getMenu(): Observable<Array<MenuGroup>> {
-        const url = '../../../data/navigation.json';
-        return this.http.jsonp<Array<MenuGroup>>(url, 'result');
+        const url = 'assets/navigation.json';
+        return this.http.request(url).map((value: Response, index: number) => {
+            return value.json();
+        });
     }
 }

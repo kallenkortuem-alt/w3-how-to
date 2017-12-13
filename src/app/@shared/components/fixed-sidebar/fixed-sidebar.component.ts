@@ -2,10 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MenuGroup } from '../../entities';
 import { MenuItem } from '../../entities';
 import { MenuService } from '../../services/menu.service';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/finally';
-import 'rxjs/add/operator/map';
+
 
 @Component({
     selector: 'app-fixed-sidebar',
@@ -22,7 +19,14 @@ export class FixedSidebarComponent implements OnInit {
 
     public ngOnInit(): void {
         if (!this.menuGroups) {
-            this.setDefaultGroups();
+            this.menuService.getMenu().subscribe(
+                result => {
+                    this.menuGroups = result;
+                },
+                error => {
+                    console.log(error);
+                }
+            );
         }
     }
 
