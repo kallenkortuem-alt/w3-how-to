@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+
+import { WINDOW_PROVIDERS } from './services';
+import { MenuService } from './services';
+
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { CardComponent } from './components/card/card.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
@@ -10,7 +14,8 @@ import { ResponsiveTopNavComponent } from './components/responsive-top-nav/respo
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { SocialMediaButtonsComponent } from './components/social-media-buttons/social-media-buttons.component';
 import { TabsComponent } from './components/tabs/tabs.component';
-import { MenuService } from './services/menu.service';
+import { StickyHeaderComponent } from './components/sticky-header/sticky-header.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +28,9 @@ import { MenuService } from './services/menu.service';
         ResponsiveTopNavComponent,
         SlideshowComponent,
         SocialMediaButtonsComponent,
-        TabsComponent
+        TabsComponent,
+        StickyHeaderComponent,
+        LayoutComponent
     ],
     exports: [
         AccordionComponent,
@@ -35,13 +42,16 @@ import { MenuService } from './services/menu.service';
         ResponsiveTopNavComponent,
         SlideshowComponent,
         SocialMediaButtonsComponent,
-        TabsComponent
+        TabsComponent,
+        StickyHeaderComponent,
+        LayoutComponent
     ],
     imports: [
       CommonModule
     ],
     providers: [
-        MenuService
+        MenuService,
+        WINDOW_PROVIDERS
     ]
 })
 export class SharedModule { }
